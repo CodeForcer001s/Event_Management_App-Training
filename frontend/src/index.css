@@ -1,0 +1,36 @@
+/* ______________________________LIGHT THEME FOR THE WEB APP ___________________________________*/
+:root {
+    --primary-color: #3498db;  /* Blue */
+    --secondary-color: #2ecc71; /* Green */
+    --font-color: #2c3e50;     /* Dark text for light theme */
+    --bg-color: #ffffff;       /* White background */
+    --heading-color: #34495e;  /* Darker color for headings */
+  }
+  
+  body.light-theme {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+  }
+  
+  body.light-theme h1, body.light-theme h2, body.light-theme h3 {
+    color: var(--heading-color);
+  }
+
+/* ________________________________DARK THEME FOR THE WEB APP _________________________________ */
+:root {
+    --primary-color-dark: #1abc9c;  /* Teal */
+    --secondary-color-dark: #9b59b6; /* Purple */
+    --font-color-dark: #ecf0f1;     /* Light text for dark theme */
+    --bg-color-dark: #2c3e50;       /* Dark background */
+    --heading-color-dark: #ecf0f1;  /* Light color for headings */
+  }
+  
+  body.dark-theme {
+    background-color: var(--bg-color-dark);
+    color: var(--font-color-dark);
+  }
+  
+  body.dark-theme h1, body.dark-theme h2, body.dark-theme h3 {
+    color: var(--heading-color-dark);
+  }
+  
