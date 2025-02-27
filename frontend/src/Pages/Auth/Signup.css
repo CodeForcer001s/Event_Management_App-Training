@@ -1,0 +1,102 @@
+/* Reset and Theme Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg: #fff;
+  --text: #000;
+  --input-bg: #f5f5f5;
+  --button-bg: #000;
+  --button-text: #fff;
+  --shadow: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #fff;
+  --input-bg: #222;
+  --button-bg: cyan;
+  --button-text: #000;
+  --shadow: rgba(0, 255, 255, 0.3);
+}
+
+/* Centering the Form */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s ease;
+}
+
+/* Shadow Card */
+.signup-card {
+  background: var(--bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px var(--shadow);
+  text-align: center;
+  width: 320px;
+  transition: 0.3s ease;
+}
+
+.signup-card h2{
+  margin-bottom:20px;
+}
+
+/* Form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Inputs */
+.signup-form input {
+  padding: 10px;
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: 16px;
+  border: 1px solid var(--text);
+  transition: 0.3s ease;
+}
+
+.signup-form input:focus {
+  border-color: cyan;
+}
+
+/* Buttons */
+.signup-form button, .theme-toggle {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.signup-form button {
+  background: var(--button-bg);
+  color: var(--button-text);
+}
+
+.signup-form button:hover {
+  background: cyan;
+  color: var(--text);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  color: var(--text);
+}
