@@ -28,7 +28,7 @@ const EventsCreate = () => {
     const token = localStorage.getItem('token');
     
     try {
-      await axios.post('http://localhost:8080/events/create', formData, {
+      await axios.post('https://event-management-app-training.vercel.app/events/create', formData, {
         headers: {
           'Authorization': `Bearer ${token}`
         },

@@ -13,18 +13,18 @@ const Profile = () => {
       const token = localStorage.getItem('token');
       try {
         // Fetch user data
-        const userResponse = await axios.get('http://localhost:8080/AuthRouter/me', {
+        const userResponse = await axios.get('https://event-management-app-training.vercel.app/AuthRouter/me', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setUserData(userResponse.data);
 
         // Fetch all events and filter by user's email
-        const eventsResponse = await axios.get('http://localhost:8080/events/all');
+        const eventsResponse = await axios.get('https://event-management-app-training.vercel.app/events/all');
         const userEvents = eventsResponse.data.filter(event => event.email === userResponse.data.email);
         setCreatedEvents(userEvents);
 
         // Fetch registered events
-        const registeredResponse = await axios.get('http://localhost:8080/events/registered/me', {
+        const registeredResponse = await axios.get('https://event-management-app-training.vercel.app/events/registered/me', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setRegisteredEvents(registeredResponse.data);

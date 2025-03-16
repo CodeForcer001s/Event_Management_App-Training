@@ -13,7 +13,7 @@ const EventDetails = () => {
   useEffect(() => {
     const fetchEventDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/events/${eventId}`);
+        const response = await axios.get(`https://event-management-app-training.vercel.app/events/${eventId}`);
         setEvent(response.data);
         setLoading(false);
       } catch (error) {
@@ -27,7 +27,7 @@ const EventDetails = () => {
   const handleRegister = async () => {
     const token = localStorage.getItem('token');
     try {
-      await axios.post(`http://localhost:8080/events/${eventId}/register`, {}, {
+      await axios.post(`https://event-management-app-training.vercel.app/events/${eventId}/register`, {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
       navigate('/profile');

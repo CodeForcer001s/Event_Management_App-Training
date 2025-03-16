@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/AuthRouter"; // ✅ Backend URL
+const API_URL = "https://event-management-app-training.vercel.app/AuthRouter"; // Backend URL
 
 export const signupUser = async (userData) => {
   const response = await fetch(`${API_URL}/register`, {

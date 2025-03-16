@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';  
-import { signupUser } from "../../api.js";
+import axios from 'axios';
 import './Signup.css';
 
 const SignUp = () => {
@@ -14,11 +14,16 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = await signupUser(form);
-    setMessage(data.message);
+    try {
+      const response = await axios.post('https://event-management-app-training.vercel.app/AuthRouter/register', form);
+      const data = response.data;
+      setMessage(data.message);
 
-    if (data.message=="User registered successfully") {
-      navigate('/login'); // ✅ Redirect instantly after signup
+      if (data.message === "User registered successfully") {
+        navigate('/login');
+      }
+    } catch (error) {
+      setMessage(error.response?.data?.message || 'Registration failed');
     }
   };
 

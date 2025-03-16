@@ -12,7 +12,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/events/all');
+        const response = await axios.get('https://event-management-app-training.vercel.app/events/all');
         setEvents(response.data);
         setLoading(false);
       } catch (error) {

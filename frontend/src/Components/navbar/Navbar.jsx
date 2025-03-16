@@ -16,7 +16,7 @@ const Navbar = () => {
       }
 
       try {
-        const res = await axios.get("http://localhost:8080/AuthRouter/me", {
+        const res = await axios.get("https://event-management-app-training.vercel.app/AuthRouter/me", {
           headers: {
             'Authorization': `Bearer ${token}`
           },
@@ -38,7 +38,7 @@ const Navbar = () => {
   const handleSignOut = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.post("http://localhost:8080/AuthRouter/logout", {}, { 
+      await axios.post("https://event-management-app-training.vercel.app/AuthRouter/logout", {}, { 
         headers: {
           'Authorization': `Bearer ${token}`
         },

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { loginUser } from '../../api.js';
+import axios from 'axios';
 import './login.css';
 
 const Login = () => {
@@ -9,13 +9,19 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = await loginUser({ email, password });
+    try {
+      const response = await axios.post('https://event-management-app-training.vercel.app/AuthRouter/login', {
+        email,
+        password
+      });
+      const data = response.data;
 
-    if (data.token) {
-      localStorage.setItem("token", data.token); // ✅ Store token in local storage
-      window.location.href = "/profile"; // ✅ Redirect to dashboard
-    } else {
-      setMessage(data.message);
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+        window.location.href = "/profile";
+      }
+    } catch (error) {
+      setMessage(error.response?.data?.message || 'Login failed');
     }
   };
 
@@ -26,12 +32,26 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+              required 
+            />
           </div>
 
           <div className="input-group">
             <label htmlFor="password">Password</label>
-            <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+              required 
+            />
           </div>
 
           <button type="submit" className="btn">Login</button>
