@@ -1,0 +1,103 @@
+.error-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+  padding: 20px;
+}
+
+.error-content {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 20px 20px 60px #d1d9e6,
+              -20px -20px 60px #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  max-width: 500px;
+  width: 90%;
+}
+
+.error-content h1 {
+  font-size: 80px;
+  color: #5a6fe6;
+  margin: 0;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(90, 111, 230, 0.1);
+}
+
+.error-content h2 {
+  font-size: 24px;
+  color: #2d3748;
+  margin: 20px 0;
+}
+
+.error-content p {
+  color: #4a5568;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.error-divider {
+  height: 4px;
+  width: 60px;
+  background: #5a6fe6;
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+.error-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.error-actions button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button {
+  background: #5a6fe6;
+  color: white;
+  box-shadow: 5px 5px 10px #d1d9e6,
+              -5px -5px 10px #ffffff;
+}
+
+.login-button:hover {
+  background: #4a5fd6;
+  transform: translateY(-2px);
+}
+
+.back-button {
+  background: #ffffff;
+  color: #5a6fe6;
+  border: 2px solid #5a6fe6 !important;
+  box-shadow: 5px 5px 10px #d1d9e6,
+              -5px -5px 10px #ffffff;
+}
+
+.back-button:hover {
+  background: rgba(90, 111, 230, 0.1);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .error-content h1 {
+    font-size: 60px;
+  }
+  
+  .error-actions {
+    flex-direction: column;
+  }
+  
+  .error-content {
+    padding: 30px;
+  }
+}

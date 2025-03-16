@@ -1,0 +1,3 @@
+This folder is for the purposes of connecting to anything 3rd party so that we can work with them. 
+All connections are handled inside this folder in individual files.
+Not like there are many files at that rather 
