@@ -2,119 +2,120 @@
 
 /* Ensure the navbar is fixed and on top */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  padding: 10px;
-}
-
-/* Content styling */
-.dashboard-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  width: 100%;
-  min-height: calc(100vh - 80px);
-  background-color: #f9f9f9;
-  margin-top: 80px;
-  padding: 20px;
-}
-
-.events-wrapper {
-  grid-area: 1 / 1 / 5 / 4;
-  padding: 20px;
-}
-
-.events-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  height: 100%;
-}
-
-h1 {
-  grid-column: 1 / -1;
-  text-align: center;
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Rest of your existing card styles remain the same */
-.event-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  min-height: 300px;
-  width: 100%;
-}
-
-.event-card:hover {
-  transform: translateY(-5px);
-}
-
-.card-content {
-  padding: 20px;
-}
-
-.event-type-badge {
-  display: inline-block;
-  background-color: #3b9bff;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-.event-name {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 10px 0;
-}
-
-.event-details {
-  margin-bottom: 20px;
-}
-
-.detail-item {
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 8px;
-}
-
-.detail-item i {
-  margin-right: 10px;
-  color: #3b9bff;
-}
-
-.join-button {
-  background-color: #3b9bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 25px;
-  font-size: 1rem;
-  cursor: pointer;
-  width: 100%;
-  transition: background-color 0.3s;
-}
-
-.join-button:hover {
-  background-color: #007acc;
-}
-
-.dashboard-loading {
-  grid-column: 1 / -1;
-  text-align: center;
-  font-size: 1.5rem;
-  color: #555;
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 10px;
+  }
+  
+  /* Content styling */
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    background-color: #f9f9f9;
+    margin-top: 80px;
+    padding: 20px;
+  }
+  
+  .events-wrapper {
+    grid-area: 1 / 1 / 5 / 4;
+    padding: 20px;
+  }
+  
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    height: 100%;
+  }
+  
+  h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Rest of your existing card styles remain the same */
+  .event-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    min-height: 300px;
+    width: 100%;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .event-type-badge {
+    display: inline-block;
+    background-color: #3b9bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .event-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  
+  .event-details {
+    margin-bottom: 20px;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .detail-item i {
+    margin-right: 10px;
+    color: #3b9bff;
+  }
+  
+  .join-button {
+    background-color: #3b9bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .join-button:hover {
+    background-color: #007acc;
+  }
+  
+  .dashboard-loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #555;
+  }
+  
